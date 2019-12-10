@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class whilepertama {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       
+        boolean running = true;
+        int counter = 0;
+        String pilih;
+        Scanner scan = new Scanner(System.in);
+
+        while( running ) {
+            System.out.println("Shutdown atau Restart Komputer ?");
+            System.out.print("Jawab [Shutdown/Restart]> ");
+
+            pilih = scan.nextLine();
+
+            
+            if( pilih.equalsIgnoreCase("Shutdown") ){
+                running = false;
+            }
+
+            counter++;
+        }
+
+        System.out.println("Anda sudah melakukan merestart komputer " + counter + " kali");
+    }
+    
+}
